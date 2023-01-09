@@ -11,7 +11,8 @@ export default function Intro() {
           </div>
         </div>
         <div className="right">
-          <div className="nameCard">
+        <p className="youare">YOU ARE </p>
+          <div className="nameTag">
               <h1>HELLO</h1>
               <h3>my name is</h3>
               <div className="name">
@@ -26,6 +27,11 @@ export default function Intro() {
                 
               </div>
           </div>
+          <p className="quote">YOUR JOB</p>
+          <p className="quote">HOW MUCH MONEY YOU HAVE IN THE BANK </p>
+          <p className="quote">THE CAR YOU DRIVE</p>
+          <p className="quote">THE CONTENTS OF YOUR WALLET</p>
+          <p className="quote">YOUR F*&#!NG KHAKIS</p>
           <a href="#portfolio">
             <img src="assets/down.png" alt=""></img>
           </a>
