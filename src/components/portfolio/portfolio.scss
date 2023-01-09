@@ -1,3 +1,37 @@
+@import "../../global.scss";
+
 .portfolio{
-    background-color: lightskyblue;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    h1{
+        font-size: 50px;
+        margin-top: 20px;
+    }
+    ul{
+        margin: 10px;
+        padding: 0px;
+        list-style: none;
+        display: flex;
+
+        li{
+            font-size: 25px;
+            margin: 25px;
+            padding: 8px;
+            border-radius: 10px;
+
+            &.active{
+                background-color: rgb(143, 173, 188);
+                color: white;
+            }
+        }
+    }
+
+    .container{
+        width: 70%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
 }
