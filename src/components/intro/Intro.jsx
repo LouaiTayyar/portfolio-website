@@ -1,17 +1,8 @@
 import "./intro.scss"
-import { init } from 'ityped'
-import { useEffect, useRef } from "react"
+import Typewriter from 'typewriter-effect';
+
 
 export default function Intro() {
-
-  const textRef = useRef();
-  useEffect(()=>{
-    init(textRef.current,{
-      showCursor: false,
-      strings:['Rupert','Cornelius!','Jack']})
-  },[])
-
-
   return (
     <div className="intro" id="intro"> 
         <div className="left">
@@ -24,7 +15,15 @@ export default function Intro() {
               <h1>HELLO</h1>
               <h3>my name is</h3>
               <div className="name">
-                <h2><span ref={textRef}></span></h2>
+                <h2><Typewriter
+                      options={{
+                        strings: ['Rupert', 'Cornelius','Lenny','Travis','Jack'],
+                        autoStart: true,
+                        loop: true,
+                      }}
+                    />
+                </h2>
+                
               </div>
           </div>
           <a href="#portfolio">
