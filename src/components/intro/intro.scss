@@ -25,7 +25,25 @@
             }
         }
 
+        &.narrator{
+            .imgContainer{
+                width: 900px;
+                height: 900px;
+                background-color: rgb(143, 173, 188);
+                border-radius: 50%;
+
+                float: right;
+    
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: fill;
+                    object-position: bottom 10px left 110px;              
+                }
+            }
+        }
     }
+
 
     .right {
         flex: 1;

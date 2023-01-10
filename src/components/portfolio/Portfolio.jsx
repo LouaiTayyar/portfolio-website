@@ -11,7 +11,7 @@ import {
 
 export default function Portfolio() {
 
-  const [selected,setSelected] = useState("soap");
+  const [selected,setSelected] = useState("featured");
   const [data,setData] = useState([]);
 
 

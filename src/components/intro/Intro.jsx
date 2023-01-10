@@ -1,13 +1,17 @@
 import "./intro.scss"
 import Typewriter from 'typewriter-effect';
+import { useState } from 'react';
 
 
 export default function Intro() {
+
+  const [narrator,switchCharacter] = useState(false);
+
   return (
     <div className="intro" id="intro"> 
-        <div className="left">
+        <div className={narrator ? "left narrator" : "left"}  onClick={()=> switchCharacter(!narrator)}>
           <div className="imgContainer">
-              <img src="assets/tylerhd.png" alt=""></img>
+              <img src={narrator ? "assets/narratorhd.png" : "assets/tylerhd.png"} alt=""></img>
           </div>
         </div>
         <div className="right">
