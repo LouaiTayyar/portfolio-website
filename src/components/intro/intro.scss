@@ -5,6 +5,11 @@
     background-color:white;
     display: flex;
 
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+    }
+
     .left{
         flex: 1;
         overflow: hidden;
@@ -20,8 +25,16 @@
             align-items: flex-end;
             justify-content: flex-end;
 
+            @include mobile{
+                align-items: flex-start;
+                justify-content: center;
+            }
             img{
-                                    object-fit: fill;
+                object-fit: fill;
+
+                @include mobile{
+                    height: 50%;
+                }
             }
         }
 
@@ -31,10 +44,19 @@
                 height: 900px;
                 background-color: rgb(143, 173, 188);
                 border-radius: 50%;
-    
+                @include mobile{
+                    align-items: flex-start;
+                    justify-content: center;
+                }
                 img{
                     object-fit: fill;
-                    object-position: bottom 10px left 110px;              
+                    object-position: bottom 10px left 110px;  
+                    
+                    @include mobile{
+                        height: 50%;
+                        object-position: bottom 10px left 40px;  
+
+                    }
                 }
             }
         }
@@ -50,9 +72,14 @@
         position: relative;
         color: $mainColor;
 
+
         .youare{
             font-size: 40px;
             font-weight: 500;
+
+            @include mobile{
+                visibility: collapse;
+            }
         }
 
         @keyframes quote{
@@ -63,6 +90,10 @@
             font-size: 40px;
             margin-top: 30px;
             position: relative;
+
+            @include mobile{
+                visibility: collapse;
+            }
         }
         .quote::after {
         content: ' ';
@@ -107,6 +138,12 @@
             padding: 0;
             border-radius: 10px;
 
+            @include mobile{
+                margin-top: 0;
+                border-radius: 0;
+                width: 100vw;
+                height: 100vh;
+            }
 
             h1{
                 font-size: 50px;
@@ -134,6 +171,13 @@
                 height: 50px;
                 padding-top: 15px;
                 padding-bottom: 15px;
+
+                @include mobile{
+                    height: 100px;
+                    font-size: 50px;
+                    padding-top: 30px;
+                    width: 98vw;
+                }
             }
         }
     }
