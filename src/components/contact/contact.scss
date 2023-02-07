@@ -1,6 +1,12 @@
+@import "../../global.scss";
+
 .contact{
     background-color: rgb(255, 255, 255);
     display: flex;
+
+    @include mobile{
+        flex-direction: column;
+    }
 
     .left{
         flex: 1;
@@ -35,12 +41,24 @@
                 width: 400px;
                 height: 30px;
                 font-size: 20px;
+                
+                @include mobile{
+                    width: 250px;
+                    height: 20px;
+                }
+                
             }
 
             textarea{
                 width: 400px;
                 height: 200px;
                 font-size: 20px;
+
+                @include mobile{
+                    width: 250px;
+                    height: 100px;
+                    font-size: 15px;
+                }
             }
 
             button{

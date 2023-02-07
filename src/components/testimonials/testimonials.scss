@@ -5,10 +5,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 
     h1{
         font-size: 60px;
         margin-top: 25px;
+        @include mobile{
+            font-size: 20px;
+        }
     }
 
     .container{
@@ -17,6 +21,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include mobile{
+            flex-direction: column;
+            margin-top: 20px;
+        }
 
         .card{
             width: 300px;
@@ -30,10 +39,20 @@
             background-color: whitesmoke;
             transition: all 1s ease-out;
 
+            @include mobile{
+                padding: 10px;
+            }
+
             &.featured{
                 width: 400px;
                 height: 75%;
                 margin: 0 40px;
+
+                @include mobile{
+                    width: 300px;
+                    height: 70%;
+                    margin: 20px;
+                }
 
             }
 
@@ -49,6 +68,11 @@
                 img{
                     &.left,&.right{
                         height: 45px;
+
+                        @include mobile{
+                            width: 25px;
+                            height: 25px;
+                        }
                     }
 
                     &.user{
@@ -57,6 +81,11 @@
                         border-radius: 50%;
                         object-fit: cover;
                         margin: 0 40px;
+
+                        @include mobile{
+                            width: 40px;
+                            height: 40px;
+                        }
                     }
                 }
             }
@@ -65,6 +94,10 @@
                 padding: 10px;
                 border-radius: 10px;
                 background-color: antiquewhite;
+
+                @include mobile{
+                    font-size: 12px;
+                }
             }
 
             .bottom{
